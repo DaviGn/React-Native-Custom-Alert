@@ -40,7 +40,7 @@ After that all you need to do is to call showAlert or closeAlert methods from an
 import { View } from 'react-native';
 import { useCustomAlert } from './src/index';
 
-function Home() {
+export default function Home() {
   const { closeAlert, showAlert } = useCustomAlert();
 
   return (
