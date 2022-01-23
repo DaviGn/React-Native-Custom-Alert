@@ -3,6 +3,8 @@ export type CustomAlertWindowParams = {
   title?: string;
   message: string;
   alertType?: 'Ok' | 'Confirm';
+  okConfirmButtonText?: string;
   okConfirmButtonCallback(): void;
+  cancelButtonText?: string;
   cancelButtonCallback?(): void;
 };

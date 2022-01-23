@@ -10,8 +10,8 @@ function Home() {
       <TouchableOpacity
         onPress={() => {
           showAlert({
-            title: 'Título',
-            message: 'Teste de alerta',
+            title: 'Your title here!',
+            message: 'Your message here!',
             okConfirmButtonCallback: () => {},
             cancelButtonCallback: () => {
               closeAlert();

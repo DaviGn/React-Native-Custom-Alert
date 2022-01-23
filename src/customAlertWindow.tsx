@@ -52,7 +52,9 @@ export default function CustomAlertWindow(params: CustomAlertProps) {
               {...params.okConfirmButtonStyle}
               onPress={alertParams.okConfirmButtonCallback}
             >
-              {params.okConfirmButtonStyle?.defaultText || 'Ok'}
+              {alertParams?.okConfirmButtonText ||
+                params.okConfirmButtonStyle?.defaultText ||
+                'Ok'}
             </AlertButtonText>
           </AlertButton>
         ) : (
@@ -62,7 +64,9 @@ export default function CustomAlertWindow(params: CustomAlertProps) {
               onPress={alertParams.okConfirmButtonCallback}
             >
               <AlertButtonText {...params.okConfirmButtonStyle}>
-                {params.okConfirmButtonStyle?.defaultText || 'Ok'}
+                {alertParams?.okConfirmButtonText ||
+                  params.okConfirmButtonStyle?.defaultText ||
+                  'Ok'}
               </AlertButtonText>
             </AlertButton>
             <AlertButton
@@ -71,7 +75,9 @@ export default function CustomAlertWindow(params: CustomAlertProps) {
               {...params.cancelButtonStyle}
             >
               <AlertButtonText {...params.cancelButtonStyle}>
-                {params.cancelButtonStyle?.defaultText || 'Cancel'}
+                {alertParams?.cancelButtonText ||
+                  params.cancelButtonStyle?.defaultText ||
+                  'Cancel'}
               </AlertButtonText>
             </AlertButton>
           </>
